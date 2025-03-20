@@ -1,0 +1,100 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClientHelper</RootNamespace>
+    <AssemblyName>ClientHelper</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugBox.Designer.cs">
+      <DependentUpon>DebugBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors.cs" />
+    <Compile Include="FMSBalloonTip.cs" />
+    <Compile Include="FMSEditTip.cs" />
+    <Compile Include="FMSInPlaceTip.cs" />
+    <Compile Include="FMSMessageTip.cs" />
+    <Compile Include="ImageCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC_CustomerSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CustomerSearch.Designer.cs">
+      <DependentUpon>UC_CustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_OrderSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_OrderSearch.designer.cs">
+      <DependentUpon>UC_OrderSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DebugBox.resx">
+      <DependentUpon>DebugBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CustomerSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UC_CustomerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_OrderSearch.resx">
+      <DependentUpon>UC_OrderSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataProxy\DataProxy.csproj">
+      <Project>{E437150F-E290-484C-8315-FC971D6BFFEB}</Project>
+      <Name>DataProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

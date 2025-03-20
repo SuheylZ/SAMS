@@ -1,0 +1,259 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8131585D-9E0D-4B37-8312-9A215A39B76A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PopCalc.Library, Version=1.0.2657.27836, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\PopCalc.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\CarpetDetailBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CarpetDetailBox.Designer.cs">
+      <DependentUpon>CarpetDetailBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CustomerDetailBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CustomerDetailBox.Designer.cs">
+      <DependentUpon>CustomerDetailBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PurchaseOrderBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PurchaseOrderBox.Designer.cs">
+      <DependentUpon>PurchaseOrderBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PrintBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PrintBox.Designer.cs">
+      <DependentUpon>PrintBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\CarpetDetailBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CarpetDetailBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CustomerDetailBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomerDetailBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PurchaseOrderBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PurchaseOrderBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PrintBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OptionsBox.resx">
+      <DependentUpon>OptionsBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase_Order.rdlc" />
+    <EmbeddedResource Include="Views\Carpets.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Carpets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Customers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintPreview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Dialogs\OptionsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OptionsBox.Designer.cs">
+      <DependentUpon>OptionsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Datasets\DS_PurchaseOrder.cs">
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Datasets\DS_PurchaseOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Carpets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Carpets.Designer.cs">
+      <DependentUpon>Carpets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PrintPreview.Designer.cs">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClientHelper\ClientHelper.csproj">
+      <Project>{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}</Project>
+      <Name>ClientHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataProxy\DataProxy.csproj">
+      <Project>{E437150F-E290-484C-8315-FC971D6BFFEB}</Project>
+      <Name>DataProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TroveTech.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tts.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\tts1.JPG" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SAM.JPG" />
+    <None Include="Reports\Datasets\DS_PurchaseOrder.xsc">
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Datasets\DS_PurchaseOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PurchaseOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Datasets\DS_PurchaseOrder.xss">
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\SAM1.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

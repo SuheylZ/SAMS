@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProxy", "DataProxy\DataProxy.csproj", "{E437150F-E290-484C-8315-FC971D6BFFEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{8131585D-9E0D-4B37-8312-9A215A39B76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientHelper", "ClientHelper\ClientHelper.csproj", "{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E437150F-E290-484C-8315-FC971D6BFFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E437150F-E290-484C-8315-FC971D6BFFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E437150F-E290-484C-8315-FC971D6BFFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E437150F-E290-484C-8315-FC971D6BFFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8131585D-9E0D-4B37-8312-9A215A39B76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8131585D-9E0D-4B37-8312-9A215A39B76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8131585D-9E0D-4B37-8312-9A215A39B76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8131585D-9E0D-4B37-8312-9A215A39B76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C133FBBF-C5B8-4635-BB98-47EAD4B8CE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

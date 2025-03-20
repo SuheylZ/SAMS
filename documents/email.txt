@@ -1,0 +1,12 @@
+Hi Suhail Bhai,
+Please find attached the updated source code for SAMS. I have made the changes on the report.
+Please view the list of changes requried from your side.
+1. Have to include Sold By field on the purchase order form. I have added it on the report but its static i mean its not connected to any specific field as there is no sold by field in our existing table schema.
+2. Have to separate the Date and Time fields on PO form and report. The Date is OK, but the time should be open ended and should allow the user to type the time(Formats: 10-12 am/p.m, 10:30 am/pm, or any other representation. Just keep it as text or if varchar then with 250 size at least)
+3. Have to include customer's own size field with Yes / No options and an open ended text area on the purchase order form and report.
+
+Please use the code that i have attached with this email. Also, please review the report to get some more idea of the changes that i have made and where your input is needed.
+Do let me know, if anything is not clear i will try to give you a call on monday INSHA ALLAH.
+
+Kind Regards,
+Mubashir Afroz.
